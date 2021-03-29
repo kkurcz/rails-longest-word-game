@@ -1,0 +1,38 @@
+
+<div class="game-display">
+  <h1>Result</h1>
+  <% if @result %>
+    <p>Congratulations! <%= @answer %> is correct!</p>
+  <% elsif @english_word == false && @in_grid == false %>
+    <p>Sorry! "<%= @answer %>" is not an english word and not on the board!</p>
+  <% elsif @english_word == false %>
+    <p>Sorry! "<%= @answer %>" is not an english word!</p>
+  <% elsif @in_grid == false %>
+     <p>Sorry! "<%= @answer %>" is not on the grid!</p>
+  <% end %>
+
+  <%= link_to 'Try again', new_path %>
+</div>
+<!--
+Your answer:
+<%= @answer %>
+
+in grid?
+
+<h1>
+<%= @in_grid %>
+</h1>
+
+english word?
+
+<h1>
+<%= @english_word %>
+</h1>
+
+Your word is in the grid and is english:
+<h1>
+  <%= @result %>
+</h1>
+ -->
+
+
